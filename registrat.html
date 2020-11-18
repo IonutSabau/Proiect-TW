@@ -1,0 +1,87 @@
+<?php
+require_once('config.php');
+?>
+<html>
+<head >
+	<title>Inregistrare</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+</head>
+
+<body align="center">
+
+
+<div>
+	<form action="registration.php" method="post" >
+		<div class="container">
+			
+			<div class="row">
+				<div class="col-sm-3">
+					<h1>Inregistrare</h1>
+					<p>Completeaza casutele cu informatiile corespunzatoare.</p>
+					<hr class="mb-3">
+					<label for="name"><b>Nume si Prenume</b></label>
+					<input class="form-control" id="name" type="text" name="name" required>
+
+					<label for="telefon"><b>Telefon</b></label>
+					<input class="form-control" id="telefon"  type="text" name="telefon" required>
+
+					<label for="adresa"><b>Adresa</b></label>
+					<input class="form-control" id="adresa" type="text" name="adresa" required>
+
+					<label for="email"><b>Email</b></label>
+					<input class="form-control" id="email"  type="email" name="email" required>
+
+					<label for="parola"><b>Parola</b></label>
+					<input class="form-control" id="parola"  type="text" name="parola" required>
+					<hr class="mb-3">
+					<input class="btn btn-primary" type="submit" id="register" name="create" value="Sign Up">
+				</div>
+			</div>
+		</div>
+	</form>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+<script type="text/javascript">
+	$(function(){
+		$('#register').click(function(e){
+			var valid = this.form.checkValidity();
+			if(valid){
+			var name = $('#name').val();
+			var telefon	= $('#telefon').val();
+			var email = $('#email').val();
+			var parola = $('#parola').val();
+			
+				e.preventDefault();	
+				$.ajax({
+					type: 'POST',
+					url: 'process.php',
+					data: {name: name, telefon: telefon,email: email,parola: parola},
+					success: function(data){
+					Swal.fire({
+								'title': 'Succes',
+								'text': 'YEEEY',
+								'type': 'succes'
+								})
+							
+					},
+					error: function(data){
+						Swal.fire({
+								'title': 'Errors',
+								'text': 'Au aparut niste erori la salvarea datelor.',
+								'type': 'error'
+								})
+					}
+				});
+				
+			}else{
+				
+			}
+			
+		});		
+		
+	});
+	
+</script>
+</body>
+</html>
