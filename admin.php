@@ -6,7 +6,7 @@ session_start();
 ?>
 <style>
 body{
-	background-image: url("roz.jpg");
+	background-image: url("contact.png");
 	background-attachment: fixed;
 	background-size: cover;
 	color: white;	
@@ -21,23 +21,28 @@ padding-left: 30%;
 }
 
 #website{
-width:800px;
-height:150px;
-background-color: #ffc0cb;
+width:600px;
+height:50px;
+background-color:#33bbff;
 border-radius: 15px;
-font-family: 'Gloria Hallelujah', 'Verdana', cursive;
-font-size:40px;
+font: 12px/15px Arial, Helvetica, sans-serif;
+font-size:10px;
 text-align:center;
-margin-top: 20px;
+margin-top: 10px;
 margin-bottom:20px;
 margin-left: 170px;
-opacity: 0.9;
+text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.26);
+border-radius: 3px;
+ padding: 20px;
+ background: rgba(0, 0, 0, 0.6);
+ color: #fff;
+ font: 18px Arial, sans-serif;
 }
 
 #inventory{
-width:800px;
-height:150px;
-background-color: #00bfff;
+width:600px;
+height:50px;
+background-color: #33bbff;
 border-radius: 15px;
 font-family: 'Gloria Hallelujah', 'Verdana', cursive;
 font-size:40px;
@@ -45,7 +50,12 @@ text-align:center;
 margin-top: 20px;
 margin-bottom:20px;
 margin-left: 170px;
-opacity: 0.9;
+text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.26);
+border-radius: 3px;
+ padding: 20px;
+ background: rgba(0, 0, 0, 0.6);
+ color: #fff;
+ font: 18px Arial, sans-serif;
 }
 
 p{
@@ -54,7 +64,7 @@ p{
 
 /* LOGOUT BUTTON STARTS */
 #logoutButton{
-	background-color: #00CC99;
+	background-color: #33bbff;
 	min-width: 100px;
 	border: none;
 	padding: 10px;
@@ -69,7 +79,7 @@ p{
 	border-radius: 3px;
 }
 #logoutButton:hover{
-	background-color:#44c767;
+	background-color:#0088cc;
 	position:relative;
 	top:5px;
 }
@@ -82,7 +92,7 @@ p{
 <link rel="shortcut icon" href="makeup.png" sizes="32x32">
 <link href="https://fonts.googleapis.com/css?family=Bree+Serif" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">
-<title>Admin | Make-up Shop</title>
+<title>Admin | Online Shop</title>
 <style type="text/css">
 		#logo{			
 			width: 20.1%;
@@ -96,7 +106,7 @@ p{
 </head>
 <body bgcolor=black>
 <div id="logo">
-	<img src="makeup.png" width="25%">
+	<img src="mx.png" width="25%">
 </div>
 
 <div id=login style="float: right;">
@@ -113,18 +123,18 @@ p{
 	<table>
 	<tr>
 	<td>
-	<a href="FirstPage.html" target="_blank" style="text-decoration: none;">&nbsp;
-	<img src="makeup.png" width="25%"></a>
+	<a href="PrimaPagina.html" target="_blank" style="text-decoration: none;">&nbsp;
+	<img src="mx.png" width="25%"></a>
 	</td>
 
 	<td>
-	<a href="FirstPage.html" target="_blank" style="text-decoration: none;">
-	<p><strong>&nbsp;&nbsp;&nbsp;&nbsp;Vizitează site-ul</strong></p>
+	<a href="PrimaPagina.html" target="_blank" style="text-decoration: none;">
+	<p style="color:white"><b><strong><font size="+2">Vizitează site-ul</font></strong></b></p>
 	</a>
 	</td>
 
 	<td>
-	<a href="FirstPage.html" target="_blank" style="text-decoration: none;">&nbsp;
+	<a href="PrimaPagina.html" target="_blank" style="text-decoration: none;">&nbsp;
 	</td>
 
 
@@ -141,11 +151,11 @@ p{
 	<tr>
 	<td>
 	<a href="inventory.php" style="text-decoration: none;">&nbsp;
-	<img src="body3.jpg" width="15%"></a>	
+	<img src="mx.png" width="25%"></a>	
 	</td>
 	<td>
 	<a href="inventory.php" style="text-decoration: none;">
-	<p><strong>Inventarul</strong></p>
+	<p style="color:white"><strong><font size="+2">Inventarul</font></strong></p>
 	</a>
 	</td></tr>
 	</table>

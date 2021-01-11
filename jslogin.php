@@ -13,20 +13,15 @@ if($result)
 	$user = $stmtselect->fetch(PDO::FETCH_ASSOC);
 	if($stmtselect->rowCount() > 0)
 	{ 
-		if($username=='ionutadmin@yahoo.com' && $password=='admin' )
+		if($username=='admin.ionut@yahoo.com' && $password=='ionut' )
 		{
 		 $_SESSION['userlogin'] = $user;
-		 echo'Te-ai logat ca ADMIN!';
+		   echo'1';
 		}
 		else
 	{
 		$_SESSION['userlogin'] = $user;
-		
-		$sql2 = "SELECT 'Nume si Prenume' FROM users WHERE email = ? LIMIT 1";
-		$stmtselect2  = $db->prepare($sql2);
-		$result = $stmtselect2->execute([$username]);
-		
-		echo "Te-ai logat ca si cumparator!";
+		   echo'0';
 		
 
 	}

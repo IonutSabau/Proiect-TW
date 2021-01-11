@@ -13,9 +13,9 @@ body,html{
 	margin: 0;
 	padding: 0;
 	height:100%;
-	background-image: url('ktm2.jpg');
+	background-image: url('funallogin.jpg');
 	 background-repeat: no-repeat;
-  background-size: 100% 90%;
+  background-size: 100% 100%;
 }
 
 .user_card{
@@ -145,9 +145,24 @@ body,html{
 				var type = $('#type').val();
 			}
 			e.preventDefault();
-			$.ajax({<!DOCTYPE html>
-
-
+			$.ajax({
+				type: 'POST',
+				url: 'jslogin.php',
+				data:  {username: username, password: password,type: type},
+				success: function(data){
+					alert(data);
+					if($.trim(data) === "1"){
+						setTimeout(' window.location.href =  "admin.php"', 1000);
+					}
+					else
+					setTimeout(' window.location.href =  "PrimaPagina.html"', 1000);
+				},
+				error: function(data){
+					alert('Au aparut erori.');
+				}
+			});
+		});
+	});
 </script>
 </body>
 </html>

@@ -1,17 +1,23 @@
 <?php
 require_once('config.php');
 ?>
+
+<style>
+.container
+{
+	background-color: #66D3FA;
+}
+</style>
 <html>
-<head >
+<head>
 	<title>Inregistrare</title>
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 </head>
-
-<body align="center">
+<body>
 
 
 <div>
-	<form action="registration.php" method="post" >
+	<form action="registration.php" method="post">
 		<div class="container">
 			
 			<div class="row">
@@ -24,17 +30,14 @@ require_once('config.php');
 
 					<label for="telefon"><b>Telefon</b></label>
 					<input class="form-control" id="telefon"  type="text" name="telefon" required>
-
-					<label for="adresa"><b>Adresa</b></label>
-					<input class="form-control" id="adresa" type="text" name="adresa" required>
-
+					
 					<label for="email"><b>Email</b></label>
 					<input class="form-control" id="email"  type="email" name="email" required>
 
 					<label for="parola"><b>Parola</b></label>
-					<input class="form-control" id="parola"  type="text" name="parola" required>
+					<input class="form-control" id="parola"  type="password" name="parola" required>
 					<hr class="mb-3">
-					<input class="btn btn-primary" type="submit" id="register" name="create" value="Sign Up">
+					<input class="btn btn-primary" style="background-color: gray;" type="submit" id="register" name="create" value="Sign Up">
 				</div>
 			</div>
 		</div>
@@ -51,19 +54,22 @@ require_once('config.php');
 			var telefon	= $('#telefon').val();
 			var email = $('#email').val();
 			var parola = $('#parola').val();
+			var type = $('#type').val();
+
 			
 				e.preventDefault();	
 				$.ajax({
 					type: 'POST',
 					url: 'process.php',
-					data: {name: name, telefon: telefon,email: email,parola: parola},
+					data: {name: name, telefon: telefon, email: email, parola: parola, type: type},
 					success: function(data){
+					window.open("pagina.html");	
 					Swal.fire({
 								'title': 'Succes',
 								'text': 'YEEEY',
 								'type': 'succes'
 								})
-							
+						
 					},
 					error: function(data){
 						Swal.fire({

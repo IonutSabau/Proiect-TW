@@ -1,17 +1,33 @@
+
 <style>
 .container
 {
-	background-color: gray;
+	width: 500px;
+    height: 1000px;
+	background-image: url("gif.gif");
+	background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
+
+
 </style>
 <html>
 <head>
-	<title>Inregistrare</title>
+	<title>Înregistrare</title>
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 </head>
-<body>
+<body style="background-color:white;">
 
-
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <!-- Homepage Leaderboard -->
+        <ins class="adsbygoogle"
+            style="display:inline-block;width:728px;height:90px"
+            data-ad-client="ca-pub-1234567890123456"
+            data-ad-slot="1234567890"></ins>
+        <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
 <div>
 	<form action="registration.php" method="post">
 		<div class="container">
@@ -19,9 +35,9 @@
 			<div class="row">
 				<div class="col-sm-3">
 					<h1>Inregistrare</h1>
-					<p>Completeaza casutele cu informatiile corespunzatoare.</p>
+					<p><i>Completează căsuțele cu informațiile corespunzătoare.</i></p>
 					<hr class="mb-3">
-					<label for="name"><b>Nume si Prenume</b></label>
+					<label for="name"><b>Nume și Prenume</b></label>
 					<input class="form-control" id="name" type="text" name="name" required>
 
 					<label for="telefon"><b>Telefon</b></label>
@@ -30,10 +46,10 @@
 					<label for="email"><b>Email</b></label>
 					<input class="form-control" id="email"  type="email" name="email" required>
 
-					<label for="parola"><b>Parola</b></label>
+					<label for="parola"><b>Parolă</b></label>
 					<input class="form-control" id="parola"  type="password" name="parola" required>
 					<hr class="mb-3">
-					<input class="btn btn-primary" type="submit" id="register" name="create" value="Sign Up">
+					<input class="btn btn-primary"style="background-color: gray;" type="submit" id="register" name="create" value="Sign Up">
 				</div>
 			</div>
 		</div>
